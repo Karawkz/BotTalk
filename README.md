@@ -1,5 +1,7 @@
 # ChatBot Data from Prime.ai (Project Summary)
 
+...will clean up code / repo in the short term...kinda messy right now...
+
 What do people send to chatbots? What do they want? What kinds of people are they? Female / male, locale...
 
 ---
