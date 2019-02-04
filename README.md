@@ -16,10 +16,16 @@ Prime.ai provided 3 types of datasets - Messages, Followers and Pages, which I u
 
 After joining the table, I used Google Gensim's pre-trained Word2Vec model, which has a vocabulary of 3 million words and phrases that are trained on ~100 billion words from a Google News dataset. The matrix is 300-dimensional. I also used tSNE to visualize the clusters.
 
+![tSNE](https://github.com/Karawkz/BotTalk/blob/master/tsne.png "plot")
+
 ## Algorithms
 To find the optimal number of clusters that should be used, I plotted the silhouette coefficient and Sum of Squared Errors (Elbow Curve) against the number of clusters. The silhouette coefficient was the highest at 4 clusters and the elbow curve had a kink at 5 clusters so I chose 4 clusters. Using SKLearn, I trained a K-Means model on the data.
 
+![sil coeff and elbow](https://github.com/Karawkz/BotTalk/blob/master/graphs.png "graphs")
+
 ## Findings
+**Refer to slides summary: [BotTalk Slides](https://github.com/Karawkz/BotTalk/blob/master/Chatbot%20Slides.pdf)**
+
 **Memes, Please**. Cluster 1 consisted of 4.7% of the dataset. It was made up of requests for different kinds of memes and puns to the bots. Most of the pages in this cluster were from the Memes and Jokebot pages. Unfortunately, the bot does not respond unless buttons are pushed, and therefore, the requester will not receive what he or she is looking for. A user might get frustrated with the bot and not return to the page or continue to use the bot. Hence, the bot should be changed to respond to these messages too.
 
 **Conversations**. Cluster 2 consisted of around 66.8% of the dataset. It was made up of different kinds of conversations from crazy people as well as specific requests. I intend to go through this dataset further and analyze to which pages, requests are sent to.
